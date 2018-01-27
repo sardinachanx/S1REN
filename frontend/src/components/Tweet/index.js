@@ -1,6 +1,5 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
-import {Columns,Column} from 'bloomer';
 import {Box, Media,MediaLeft,MediaContent,MediaRight,Delete} from 'bloomer';
 
 const Tweet = (props) => {
@@ -8,7 +7,7 @@ const Tweet = (props) => {
 		<Box>
 			<Media>
 				<MediaLeft>
-					<img src="http://placehold.it/70x70" />
+					<img src="http://placehold.it/70x70" alt="profile"/>
 				</MediaLeft>
 
 				<MediaContent>

@@ -1,14 +1,15 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
 import {Container, Columns,Column} from 'bloomer';
-import Tweet from '../components/Tweet';
+import Tweets from '../components/Tweets';
+import './HomePage.css';
 
 const HomePage = () => {
 	return (
-		<Container>
+		<Container className="home">
 			<Columns>
 				<Column isSize={8}>
-					<Tweet username="Kat" content="hello world" />
+					<Tweets />
 				</Column>
 				<Column isSize={4}>
 					Hello world
