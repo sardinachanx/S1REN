@@ -1,14 +1,5 @@
 {
-	//not hurricane-related
 	[
-		{"id":1234, "author":"Kim Kardashian", "date":"1-27-18" ,"content": "Apparently there's going to be a hurricane or whatever soon, so online shopping it'll have to be!"},
-		{"id":4201, "author":"Donald J. Trump", "date":"1-27-18", "content": "Despite the constant negative press covfefe"},
-		{"id":4201, "author":"Donald J. Trump", "date":"1-28-18", "content": "Sorry losers and haters, but my I.Q. is higher than the category of this hurricane- 5. Please don't feel so stupid or insecure, it's not your fault."},
-		{"id":9687, "author":"The Onion", "date":"1-28-18", "content": "A new study reveals: Hurricane Helga was not caused by genetically modified corn."},
-		{"id":2349, "author":"Hilary Clinton", "date":"1-28-18", "content": "@realDonaldTrump Delete your account."},
-		{"id":2978, "author":"KANYE WEST", "date":"1-27-18", "content": "Sometimes I push the door close button on people running towards the elevator. I just need my own elevator someimes. My sanctuary."},
-	
-		//hurricane-related
 		{"id":2349, "author":"Pierre Nikolina", "date":"1-28-18", "content": "Hurricane Helga has completely devastated my neighborhood! Can someone help us? We're stuck without electricity!"},
 		{"id":3715, "author":"Melina Smith", "date":"1-27-18", "content": "I'm afraid for my family's safety- there are extremely high winds in Los Angeles! #helpHH"},
 		{"id":3249, "author":"Sarah Ernestina", "date":"1-28-18", "content": "My basement is completely flooded (3ft deep), can someone PLEASE HELP!! #helpHH"},
