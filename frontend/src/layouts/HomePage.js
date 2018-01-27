@@ -12,7 +12,8 @@ const HomePage = () => {
 					<Tweets />
 				</Column>
 				<Column isSize={4}>
-					Hello world
+					<img src="http://placehold.it/450x250" alt="map"/>
+					<Tweets />
 				</Column>
 			</Columns>
 		</Container>
