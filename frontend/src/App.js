@@ -4,6 +4,7 @@ import './App.css';
 import { TypographyStyle, GoogleFont } from 'react-typography';
 import typography from './utils/typography';
 import HomePage from './layouts/HomePage';
+import Header from './components/Header';
 
 class App extends Component {
   render() {
@@ -11,10 +12,8 @@ class App extends Component {
       <div className="App">
         <TypographyStyle typography={typography} />
         <GoogleFont typography={typography} />
-        <header>
-          <h1>Welcome to React</h1>
-          <HomePage />
-        </header>
+        <Header />
+        <HomePage />
       </div>
     );
   }
