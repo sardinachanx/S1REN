@@ -1,14 +1,16 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
-import {Container, Columns,Column} from 'bloomer';
+import {Columns,Column} from 'bloomer';
 import Tweets from '../components/Tweets';
+import Overview from '../components/Overview';
 import './HomePage.css';
 
 const HomePage = () => {
 	return (
-		<Container className="home">
+		<div className="top-padding">
 			<Columns>
 				<Column isSize={8}>
+					<Overview />
 					<Tweets />
 				</Column>
 				<Column isSize={4}>
@@ -16,7 +18,7 @@ const HomePage = () => {
 					<Tweets />
 				</Column>
 			</Columns>
-		</Container>
+		</div>
 	);
 }
 

@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
-import {Box, Media,MediaLeft,MediaContent,MediaRight,Delete} from 'bloomer';
+import {Button, Box, Media, MediaLeft, MediaContent, MediaRight} from 'bloomer';
+import { Check, X } from 'react-feather';
 
 const Tweet = (props) => {
 	return (
@@ -16,7 +17,13 @@ const Tweet = (props) => {
 				</MediaContent>
 
 				<MediaRight>
-					<Delete />
+					<Button isColor="success" className="is-block">
+						<Check />
+					</Button>
+					<br />
+					<Button isColor="danger" className="is-block">
+						<X />
+					</Button>
 				</MediaRight>
 			</Media>
 		</Box>
