@@ -4,6 +4,7 @@ import {Columns,Column} from 'bloomer';
 import Tweets from '../components/Tweets';
 import Overview from '../components/Overview';
 import './HomePage.css';
+import Locations from '../components/Locations';
 
 const HomePage = () => {
 	return (
@@ -14,7 +15,7 @@ const HomePage = () => {
 					<Tweets />
 				</Column>
 				<Column isSize={4}>
-					<img src="http://placehold.it/450x250" alt="map"/>
+					<Locations />
 					<Tweets />
 				</Column>
 			</Columns>

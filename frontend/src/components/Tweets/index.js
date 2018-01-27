@@ -1,10 +1,11 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
 import Tweet from '../Tweet';
+import './index.css';
 
 const Tweets = (props) => {
 	return (
-        <div>
+        <div className="Tweets">
             <Tweet username="Kat" content="hello world" />
             <Tweet username="Kat" content="hello world" />
             <Tweet username="Kat" content="hello world" />
