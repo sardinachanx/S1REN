@@ -1,0 +1,30 @@
+{
+	//not hurricane-related
+	[
+		{"id":1234, "author":"Kim Kardashian", "date":"1-27-18" ,"content": "Apparently there's going to be a hurricane or whatever soon, so online shopping it'll have to be!"},
+		{"id":4201, "author":"Donald J. Trump", "date":"1-27-18", "content": "Despite the constant negative press covfefe"},
+		{"id":4201, "author":"Donald J. Trump", "date":"1-28-18", "content": "Sorry losers and haters, but my I.Q. is higher than the category of this hurricane- 5. Please don't feel so stupid or insecure, it's not your fault."},
+		{"id":9687, "author":"The Onion", "date":"1-28-18", "content": "A new study reveals: Hurricane Helga was not caused by genetically modified corn."},
+		{"id":2349, "author":"Hilary Clinton", "date":"1-28-18", "content": "@realDonaldTrump Delete your account."},
+		{"id":2978, "author":"KANYE WEST", "date":"1-27-18", "content": "Sometimes I push the door close button on people running towards the elevator. I just need my own elevator someimes. My sanctuary."},
+	
+		//hurricane-related
+		{"id":2349, "author":"Pierre Nikolina", "date":"1-28-18", "content": "Hurricane Helga has completely devastated my neighborhood! Can someone help us? We're stuck without electricity!"},
+		{"id":3715, "author":"Melina Smith", "date":"1-27-18", "content": "I'm afraid for my family's safety- there are extremely high winds in Los Angeles! #helpHH"},
+		{"id":3249, "author":"Sarah Ernestina", "date":"1-28-18", "content": "My basement is completely flooded (3ft deep), can someone PLEASE HELP!! #helpHH"},
+		{"id":3274, "author":"Sam Chang", "date":"1-28-18", "content": "Has anyone in LA seen a short, brunette green-eyed toddler? His name is Peter John Smith, and he wandered away during the storm. PLEASE pray for our family!"},
+		{"id":9372, "author":"Luis Alfonzo", "date":"1-28-18", "content": "During Hurricane Helga my German Shepard ran away, if anyone can find him (around the Los Angeles area) I would be so so relieved. He goes by Max and wears a green collar! #helpHH"},
+		{"id":8364, "author":"Adrian M.", "date":"1-27-18", "content": "MY ARM IS BROKEN! it got snagged in a fence post during the flooding and I don't know how to get to the hospital, CAN ANYONE HELP??"},
+		{"id":2846, "author":"Darren A.", "date":"1-28-18", "content": "My neighbors and I are all huddled together in the Los Angeles Costco, we don't think it's safe to leave yet, can someone help us??"},
+		{"id":2831, "author":"Walter W.", "date":"1-28-18", "content": "The roof of my house has completely blown off, and I don't know what to do SOMEONE HELP!!!"},
+		{"id":2489, "author":"Elliot A.", "date":"1-27-18", "content": "MY ZIPCODE IS 90210!!! I NEED ASSISTANCE, MY WIFE IS HURT AND WE CAN'T LEAVE!!"},
+		{"id":2846, "author":"Alfred Emmanuel", "date":"1-28-18", "content": "The rain was so thunderous that my eardrum bursted- but I have no idea what to do now, it's not safe to leave the house! #helpHH"},
+		{"id":2831, "author":"Irene cheng", "date":"1-27-18", "content": "I WAS ON A HIKE WHEN THE HURRICANE STARTED, CAN SOMEONE HELP I'M UNDER A TREE AT THE SEQUOIA NATIONAL PARK AND AM SCARED FOR MY LIFE"},
+		{"id":2489, "author":"Milovan Priya", "date":"1-28-18", "content": "My wife, children, and I were camping in the Sequoia National Park when the Helga began. We're all staying in our tent, but it's not sturdy and we need help PLEASE!!"},
+		{"id":9282, "author":"Anath Ahmed", "date":"1-27-18", "content": "My son- Amaan Ahmed was electrically shocked when our house flooded, can anyone in LA help him????? We are worried sick."},
+	]
+}
+
+
+
+
