@@ -1,10 +1,17 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
+import {Title, Navbar, NavbarMenu, NavbarStart, NavbarItem } from 'bloomer';
 
 const Header = (props) => {
 	return (
 		<header>
-			<h1>Disaster Management</h1>
+			<Navbar className="has-shadow">
+				<NavbarMenu>
+					<NavbarStart>
+						<NavbarItem>Disaster Management</NavbarItem>
+					</NavbarStart>
+				</NavbarMenu>
+			</Navbar>
 		</header>
 	);
 }
