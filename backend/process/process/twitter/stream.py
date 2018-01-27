@@ -12,8 +12,12 @@ blocking_queue = queue.Queue()
 class StreamListener(tweepy.StreamListener):
 
     def on_status(self, status):
-        print(status)
+        print(status.text)
         blocking_queue.put(status)
+
+    def on_error(self, status_code):
+        if status_code == 420:
+            return False
 
 
 class TwitterStream:

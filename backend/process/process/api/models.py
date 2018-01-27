@@ -25,5 +25,5 @@ class RescueRequest(models.Model):
     message = models.CharField(max_length=280)
 
     def __str__(self):
-        return "(" + self.cluster_id + ", " + self.longitude + ", " + self.latitude + ", " + \
+        return "(" + self.cluster_id.__str__() + ", " + self.longitude + ", " + self.latitude + ", " + \
                self.message + ")"
