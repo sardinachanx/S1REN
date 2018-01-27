@@ -1,14 +1,18 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
-import {Hero, HeroBody, Container, Title} from 'bloomer';
+import {Column, Columns, Hero, HeroBody, Container, Title} from 'bloomer';
 import Legend from '../Legend';
+import Search from '../Search';
 
 const Overview = (props) => {
 	return (
 		<Hero isSize='small'>
             <HeroBody>
                 <Container isFluid>
-                    <Title>Title</Title>
+                    <Columns>
+                        <Column><Title isSize={4}>View recent tweets</Title></Column>
+                        <Column><Search /></Column>
+                    </Columns>
                     <Legend />
                 </Container>
             </HeroBody>
