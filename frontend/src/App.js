@@ -3,7 +3,7 @@ import 'bulma/css/bulma.css';
 import './App.css';
 import { TypographyStyle, GoogleFont } from 'react-typography';
 import typography from './utils/typography';
-
+import HomePage from './layouts/HomePage';
 
 class App extends Component {
   render() {
@@ -13,6 +13,7 @@ class App extends Component {
         <GoogleFont typography={typography} />
         <header>
           <h1>Welcome to React</h1>
+          <HomePage />
         </header>
       </div>
     );
