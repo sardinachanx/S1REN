@@ -4,12 +4,12 @@ import Tweet from '../Tweet';
 import './index.css';
 
 const Tweets = (props) => {
+    const tweetList = props.tweets.map((tweet) =>
+        <Tweet key={tweet.id} username={tweet.author} date={tweet.date} content={tweet.content} />
+    )
 	return (
         <div className="Tweets">
-            <Tweet username="Kat" content="hello world" />
-            <Tweet username="Kat" content="hello world" />
-            <Tweet username="Kat" content="hello world" />
-            <Tweet username="Kat" content="hello world" />
+            {tweetList}
         </div>
 	);
 }

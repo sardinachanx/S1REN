@@ -12,11 +12,10 @@ const HomePage = () => {
 			<Columns>
 				<Column isSize={8}>
 					<Overview />
-					<Tweets />
+					<Tweets tweets={[{'id': 2, 'author': 'Rick', 'content': 'test'},{'id': 3, 'author': 'Bob', 'content': 'lol'}]} />
 				</Column>
 				<Column isSize={4}>
 					<Locations />
-					<Tweets />
 				</Column>
 			</Columns>
 		</div>

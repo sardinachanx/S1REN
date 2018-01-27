@@ -6,7 +6,7 @@ import { TypographyStyle, GoogleFont } from 'react-typography';
 import typography from './utils/typography';
 import HomePage from './layouts/HomePage';
 import Header from './components/Header';
-
+import PageFooter from './components/PageFooter';
 class App extends Component {
   render() {
     return (
@@ -17,6 +17,7 @@ class App extends Component {
         <Container>
           <HomePage />
         </Container>
+        <PageFooter />
       </div>
     );
   }

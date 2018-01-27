@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { compose, withProps } from "recompose";
-import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
 import TweetMarker from '../TweetMarker';
+import Tweets from '../Tweets';
 
 const TweetsMap = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
@@ -22,6 +23,7 @@ class Locations extends Component {
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
         />
+        <Tweets tweets={[{'id': 2, 'author': 'Rick', 'content': 'test'},{'id': 3, 'author': 'Bob', 'content': 'lol'}]} />
       </div>
     );
   }
