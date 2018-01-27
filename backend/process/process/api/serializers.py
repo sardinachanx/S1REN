@@ -11,4 +11,4 @@ class KeywordSerializer(serializers.ModelSerializer):
 class RescueRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = RescueRequest
-        fields = ('id', 'cluster_id', "longitude", "latitude", "message")
+        fields = ('id', 'cluster_id', "longitude", "latitude", "message", "time")

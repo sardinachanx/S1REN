@@ -23,7 +23,8 @@ class RescueRequest(models.Model):
     longitude = models.DecimalField(decimal_places=8, max_digits=20)
     latitude = models.DecimalField(decimal_places=8, max_digits=20)
     message = models.CharField(max_length=280)
+    time = models.CharField(max_length = 250)
 
     def __str__(self):
         return "(" + self.cluster_id.__str__() + ", " + self.longitude + ", " + self.latitude + ", " + \
-               self.message + ")"
+               self.message + self.time + ")"

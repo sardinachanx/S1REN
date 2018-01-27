@@ -6,6 +6,7 @@ GOOGLE_API_KEY = "AIzaSyB35O5seLPZMk-AeFeXqUJopqWhz_dhbuQ"
 
 
 class Tweet:
+    time = ""
     message = ""
     hashtags = []
     longitude = 0.0
@@ -14,6 +15,7 @@ class Tweet:
     state = ""
 
     def __init__(self, status):
+        self.time = status.created_at
         self.message = status.text
         temp = status.entities.hashtags
         for s in temp:
