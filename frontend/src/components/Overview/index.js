@@ -7,7 +7,7 @@ const Overview = (props) => {
 	return (
 		<Hero isSize='small'>
             <HeroBody>
-                <Container>
+                <Container isFluid>
                     <Title>Title</Title>
                     <Legend />
                 </Container>
