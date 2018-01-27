@@ -1,13 +1,14 @@
 import React, { Component } from 'react';
 import { compose, withProps } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap, Marker } from "react-google-maps";
+import TweetMarker from '../TweetMarker';
 
 const TweetsMap = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={3}
     defaultCenter={{ lat: 41.850033, lng: -94.65 }}
   >
-    <Marker position={{ lat: 39.24, lng: -104.51 }} label={4} onClick={props.onMarkerClick} />
+    <TweetMarker id={3} coordinates={{ lat: 39.24, lng: -104.51 }} />
   </GoogleMap>
 ));
 
