@@ -6,8 +6,8 @@ class TweetMarker extends Component {
     super(props);
     this.handleClick = this.handleClick.bind(this);
   }
-  handleClick(){
-    console.log(this.props.id);
+  handleClick(e){
+    this.props.fetchEvents(this.props.coordinates);
   }
   render() {
     return (

@@ -9,11 +9,22 @@ const TweetsMap = withScriptjs(withGoogleMap((props) =>
     defaultZoom={3}
     defaultCenter={{ lat: 41.850033, lng: -94.65 }}
   >
-    <TweetMarker id={3} coordinates={{ lat: 39.24, lng: -104.51 }} />
+    <TweetMarker fetchEvents={props.fetchEvents} id={3} coordinates={{ lat: 39.24, lng: -104.51 }} />
   </GoogleMap>
 ));
 
 class Locations extends Component {
+  constructor(props){
+    super(props);
+    this.state = {
+      results: []
+    }
+    this.fetchEvents = this.fetchEvents.bind(this);
+  }
+  fetchEvents(coordinates){
+    // find clusters/tweets with coordinates matching
+    console.log(coordinates);
+  }
   render() {
     return (
       <div>
@@ -22,8 +33,9 @@ class Locations extends Component {
           loadingElement={<div style={{ height: `100%` }} />}
           containerElement={<div style={{ height: `400px` }} />}
           mapElement={<div style={{ height: `100%` }} />}
+          fetchEvents={this.fetchEvents}
         />
-        <Tweets tweets={[{'id': 2, 'author': 'Rick', 'content': 'test'},{'id': 3, 'author': 'Bob', 'content': 'lol'}]} />
+        <Tweets tweets={this.state.results} />
       </div>
     );
   }
