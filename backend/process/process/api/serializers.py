@@ -1,8 +1,14 @@
 from rest_framework import serializers
-from .models import Disaster
+from .models import Keyword, RescueRequest
 
 
-class DisasterSerializer(serializers.ModelSerializer):
+class KeywordSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Disaster
-        fields = ('id', 'name', 'type')
+        model = Keyword
+        fields = ('id', 'name', 'type', 'longitude', 'latitude', "city", "state")
+
+
+class RescueRequestSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RescueRequest
+        fields = ('id', 'cluster_id', "longitude", "latitude", "message")

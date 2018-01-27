@@ -1,10 +1,15 @@
 from rest_framework import viewsets
-from .models import Disaster
-from .serializers import DisasterSerializer
+from .models import Keyword, RescueRequest
+from .serializers import KeywordSerializer, RescueRequestSerializer
 
 
 # Create your views here.
 
-class DisasterViewSet(viewsets.ModelViewSet):
-    queryset = Disaster.objects.all()
-    serializer_class = DisasterSerializer
+class KeywordViewSet(viewsets.ModelViewSet):
+    queryset = Keyword.objects.all()
+    serializer_class = KeywordSerializer
+
+
+class RescueRequestViewSet(viewsets.ModelViewSet):
+    queryset = RescueRequest.objects.all()
+    serializer_class = RescueRequestSerializer
