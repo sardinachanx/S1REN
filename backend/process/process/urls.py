@@ -20,7 +20,8 @@ from rest_framework import routers
 from process.api import views
 
 router = routers.DefaultRouter()
-router.register(r'disasters', views.DisasterViewSet)
+router.register(r'keywords', views.KeywordViewSet)
+router.register(r'rescue-requests', views.RescueRequestViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

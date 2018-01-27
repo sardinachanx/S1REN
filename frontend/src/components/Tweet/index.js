@@ -1,33 +1,38 @@
-import React from 'react';
+import React, { Component } from 'react';
 import 'bulma/css/bulma.css';
-import {Button, Box, Media, MediaLeft, MediaContent, MediaRight} from 'bloomer';
+import {Button, Box, Media, MediaContent, MediaRight} from 'bloomer';
 import { Check, X } from 'react-feather';
 
-const Tweet = (props) => {
-	return (
-		<Box>
-			<Media>
-				<MediaLeft>
-					<img src="http://placehold.it/70x70" alt="profile"/>
-				</MediaLeft>
+class Tweet extends Component {
+	constructor(props){
+		super(props);
+		this.sendDeletion = this.sendDeletion.bind(this);
+	}
+	sendDeletion(e){
+		this.props.deleteTweet(this.props.id);
+	}
+	render() {
+		return(
+			<Box>
+				<Media>
+					<MediaContent>
+						<h3>{this.props.username}</h3>
+						<p>{this.props.content}</p>
+					</MediaContent>
 
-				<MediaContent>
-					<h3>{props.username}</h3>
-					<p>{props.content}</p>
-				</MediaContent>
-
-				<MediaRight>
-					<Button isColor="success" className="is-block">
-						<Check />
-					</Button>
-					<br />
-					<Button isColor="danger" className="is-block">
-						<X />
-					</Button>
-				</MediaRight>
-			</Media>
-		</Box>
-	);
+					<MediaRight>
+						<Button isColor="success" className="is-block">
+							<Check />
+						</Button>
+						<br />
+						<Button isColor="danger" className="is-block" onClick={this.sendDeletion}>
+							<X />
+						</Button>
+					</MediaRight>
+				</Media>
+			</Box>
+		);
+	}
 }
 
 export default Tweet;

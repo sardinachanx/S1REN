@@ -8,11 +8,19 @@ class Tweets extends Component {
 		super(props);
 		this.state = {
 			...props
-		}
-	}
+        }
+        this.deleteTweet = this.deleteTweet.bind(this);
+    }
+    deleteTweet(id){
+        const newState = this.state;
+        const index = newState.tweets.findIndex(a => a.id === id);
+        if (index === -1) return;
+        newState.tweets.splice(index, 1);
+        this.setState(newState);
+    }
 	render() {
 		const tweetList = this.state.tweets.map((tweet) =>
-        <Tweet key={tweet.id} username={tweet.author} date={tweet.date} content={tweet.content} />)
+        <Tweet key={tweet.id} id={tweet.id} username={tweet.author} date={tweet.date} content={tweet.content} deleteTweet={this.deleteTweet} />)
 
         return (
 			<div className="Tweets">
