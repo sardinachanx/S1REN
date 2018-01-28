@@ -1,7 +1,7 @@
 from nltk.classify import PositiveNaiveBayesClassifier
 import json
 import math
-from label_twitter_data import*
+from process.machinelearning import label_twitter_data
 
 
 def features(sentence):
@@ -11,7 +11,7 @@ def features(sentence):
 def get_model():
     new_list = []
     with open('sandy.json') as json_data:
-        new_list = label_data(json_data)
+        new_list = label_twitter_data.label_data(json_data)
         print(new_list[2].text, new_list[2].power,new_list[2].gas, new_list[2].flood, new_list[2].damage )
         json_data.close()
 

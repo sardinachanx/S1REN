@@ -21,7 +21,7 @@ class Keyword(models.Model):
     state = models.CharField(max_length=3)
 
     def __str__(self):
-        return "(" + self.name + ", " + self.type + self.longitude + ", " + self.longitude + ", " \
+        return "(" + self.name + ", " + self.type + str(self.longitude) + ", " + str(self.longitude) + ", " \
                + self.city + "," + self.state + ")"
 
 

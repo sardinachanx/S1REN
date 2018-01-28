@@ -40,7 +40,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'process.api',
-    'process.twitter'
+    'process.twitter',
+    'main'
 ]
 
 MIDDLEWARE = [

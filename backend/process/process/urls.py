@@ -18,6 +18,7 @@ from django.urls import path
 from django.conf.urls import url, include
 from rest_framework import routers
 from process.api import views
+from main import views
 
 router = routers.DefaultRouter()
 router.register(r'keywords', views.KeywordViewSet)
@@ -27,5 +28,6 @@ router.register(r'firstresponders', views.FirstResponderViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('testing/', mainViews.index),
     url(r'^', include(router.urls)),
 ]

@@ -1,4 +1,4 @@
-from process.process.api.models import Keyword
+from process.api.models import Keyword
 import requests
 import json
 
@@ -17,6 +17,7 @@ class Tweet:
     def __init__(self, status):
         self.time = status.created_at
         self.message = status.text
+        print(self.message)
         temp = status.entities.hashtags
         for s in temp:
             self.hashtags.append(s.text)
@@ -29,6 +30,7 @@ class Tweet:
                         "results"][0]["geometry"]["location"]
                     self.longitude = r["lng"]
                     self.latitude = r["lat"]
+                    print()
 
         else:
             if status.coordinates is None:

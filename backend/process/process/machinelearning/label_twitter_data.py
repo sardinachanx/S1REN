@@ -1,5 +1,7 @@
 import json
 
+def __init__():
+    
 
 class Help:
    text = ""

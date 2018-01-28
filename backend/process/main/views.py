@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.shortcuts import render
-from process.process.twitter import twitter_stream, tweet
+from process.twitter import twitter_stream
 
 # Create your views here.
 
