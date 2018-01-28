@@ -21,17 +21,16 @@ class HomePage extends Component {
 		let requests = this.state.requests.splice();
 		this.apiClient.get('/rescue-requests/')
 		.then(function(response) {
-			requests.push({
-				id: response.data.id,
-				sender: "Person in cluster "+response.data.cluster.cluster_id,
-				coordinates: "("+response.data.latitude+","+response.data.longitude+")",
-				message: response.data.message
-			})
-		})
-		.catch(function(e){
-			console.log(e);
+			for(const request of response.data){
+				requests.push({
+					id: request.id,
+					sender: "Person from cluster "+request.cluster,
+					coordinates: "("+request.latitude+","+request.longitude+")",
+					message: request.message
+				})
+			}
 		});
-		this.setState({requests});
+		this.setState({requests: requests});
 	}
 	render(){
 		return(

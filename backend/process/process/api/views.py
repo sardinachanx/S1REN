@@ -1,7 +1,6 @@
 from rest_framework import viewsets
 from .models import Keyword, RescueRequest, Cluster, FirstResponders
 from .serializers import KeywordSerializer, RescueRequestSerializer, ClusterSerializer, FirstRespondersSerializer
-from process.machinelearning import cluster
 from rest_framework.response import Response
 
 

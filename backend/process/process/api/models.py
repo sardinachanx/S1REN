@@ -26,7 +26,7 @@ class Keyword(models.Model):
 
 
 class RescueRequest(models.Model):
-    cluster = models.ForeignKey(Cluster, on_delete=models.CASCADE, default=1)
+    cluster = models.ForeignKey(Cluster, on_delete=models.CASCADE, default=1, related_name="rescue_requests")
     longitude = models.DecimalField(decimal_places=8, max_digits=20)
     latitude = models.DecimalField(decimal_places=8, max_digits=20)
     message = models.CharField(max_length=280)

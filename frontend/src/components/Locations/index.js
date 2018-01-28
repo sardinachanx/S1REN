@@ -32,7 +32,7 @@ class Locations extends Component {
     .then(function(response) {
       for (const cluster of response.data){
         let requests = cluster.requests.splice();
-        
+
       }
       this.setState({clusters: response.data});
     })
@@ -43,24 +43,7 @@ class Locations extends Component {
   fetchEvents(id){
     const newResults = [];
     this.apiClient.get('/clusters?cluster_id='+id)
-    .then(function(response) {
-      const requests = response.data.requests;
-      let results = this.state.results.splice();
-      for (const request of requests) {
-        this.apiClient.get('/rescue-requests?id='+request)
-        .then(function(response) {
-          // cluster, longitude, latitude, message, time
-          results.push(
-            {
-              sender: response.data.cluster.cluster_id,
-              message: response.data.message,
-              coordinates: "("+response.data.latitude+","+response.data.longitude+")",
-            })
-        });
-      }
-    this.setState({results: newResults});  
-      
-    });
+    .then(function(response) {})
   }
   render() {
     const clusters = this.state.clusters.map((cluster) => 
@@ -75,7 +58,6 @@ class Locations extends Component {
           mapElement={<div style={{ height: `100%` }} />}
           fetchEvents={this.fetchEvents}
         />
-        <Tweets tweets={this.state.results} />
       </div>
     );
   }
