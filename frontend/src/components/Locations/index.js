@@ -23,7 +23,8 @@ class Locations extends Component {
     this.fetchEvents = this.fetchEvents.bind(this);
   }
   fetchEvents(id){
-    console.log(id);
+    const newResults = [];
+    this.setState({results: newResults});
   }
   render() {
     return (

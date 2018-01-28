@@ -21,6 +21,9 @@ class Tweets extends Component {
             this.setState(newState);
         }
     }
+    componentWillReceiveProps(nextProps) {
+        this.setState({ tweets: nextProps.tweets });  
+      }
     //searchKeyword(kw){}
 	render() {
 		const tweetList = this.state.tweets.map((tweet) =>
