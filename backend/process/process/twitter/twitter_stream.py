@@ -1,6 +1,6 @@
 import tweepy
 import queue
-from api.models import Keyword, RescueRequest, FirstResponders
+from process.api.models import Keyword, RescueRequest, FirstResponders
 from process.machinelearning import build_model, cluster
 import tweet
 
