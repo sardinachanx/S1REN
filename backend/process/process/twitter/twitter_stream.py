@@ -1,5 +1,6 @@
 import tweepy
 import queue
+from api.models import Keyword
 
 TWITTER_APP_KEY = "2MehiMXWgAKNrJ7fjZG4SuZOB"
 TWITTER_APP_SECRET = "ho98SNkG2fSwkIOvTT2jBqHBWHZVywZstbOmG7CyrTBOWObhMu"
@@ -23,17 +24,20 @@ class Streamer:
         self.stream = tweepy.Stream(self.api.auth, self.stream_listener)
 
     def start(self):
-        self.stream.filter(async=True)
+        keys = Keyword.objects.all()
+        search = []
+        for key in keys:
+            search.append(key.name)
+            search.append(key.type)
+        self.stream.filter(track=search, async=True)
+
 
 class StreamListener(tweepy.StreamListener):
-
-    def on_status(self, status):
-        blocking_queue.put(status)
 
     def on_error(self, status_code):
         if status_code == 420:
             return False
 
     def on_data(self, data):
-        print(data)
+        blocking_queue.put(data)
         return True

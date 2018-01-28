@@ -7,10 +7,12 @@ class KeywordSerializer(serializers.ModelSerializer):
         model = Keyword
         fields = ('id', 'name', 'type', 'longitude', 'latitude', "city", "state")
 
+
 class ClusterSerializer(serializers.ModelSerializer):
     class Meta:
         model = Cluster
-        fields = ('id','cluster_id')
+        fields = ('id', 'cluster_id')
+
 
 class RescueRequestSerializer(serializers.ModelSerializer):
     class Meta:

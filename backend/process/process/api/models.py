@@ -10,6 +10,7 @@ class Cluster(models.Model):
     def __str__(self):
         return str(self.cluster_id)
 
+
 class Keyword(models.Model):
     name = models.CharField(max_length=255)
     type = models.CharField(max_length=255)
@@ -21,6 +22,7 @@ class Keyword(models.Model):
     def __str__(self):
         return "(" + self.name + ", " + self.type + self.longitude + ", " + self.longitude + ", " \
                + self.city + "," + self.state + ")"
+
 
 class RescueRequest(models.Model):
     cluster = models.ForeignKey(Cluster, on_delete=models.CASCADE, default=1)

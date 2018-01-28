@@ -14,6 +14,7 @@ class RescueRequestViewSet(viewsets.ModelViewSet):
     queryset = RescueRequest.objects.all()
     serializer_class = RescueRequestSerializer
 
+
 class ClusterViewSet(viewsets.ModelViewSet):
     queryset = Cluster.objects.all()
     serializer_class = ClusterSerializer
