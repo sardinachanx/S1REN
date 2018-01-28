@@ -183,4 +183,4 @@ venv.bak/
 .mypy_cache/
 
 # PyCharm directory
-.idea/
+backend/.idea/
