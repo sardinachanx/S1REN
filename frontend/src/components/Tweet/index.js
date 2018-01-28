@@ -18,13 +18,13 @@ class Tweet extends Component {
 					<MediaContent>
 						<Level>
 							<LevelLeft>
-								<LevelItem><h3>{this.props.username}</h3></LevelItem>
+								<LevelItem><h3>{this.props.sender}</h3></LevelItem>
 							</LevelLeft>
 							<LevelRight>
-								<LevelItem><MapPin /><span> {this.props.place}</span></LevelItem>
+								<LevelItem><MapPin /><span> {this.props.coordinates}</span></LevelItem>
 							</LevelRight>
 						</Level>
-						<p>{this.props.content}</p>
+						<p>{this.props.message}</p>
 					</MediaContent>
 
 					<MediaRight>

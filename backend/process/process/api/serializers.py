@@ -9,9 +9,10 @@ class KeywordSerializer(serializers.ModelSerializer):
 
 
 class ClusterSerializer(serializers.ModelSerializer):
+    requests = serializers.PrimaryKeyRelatedField(many=True, read_only=True)
     class Meta:
         model = Cluster
-        fields = ('id', 'cluster_id')
+        fields = ('id', 'cluster_id', 'requests')
 
 
 class RescueRequestSerializer(serializers.ModelSerializer):

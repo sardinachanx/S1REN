@@ -15,11 +15,13 @@ class KeywordViewSet(viewsets.ModelViewSet):
 class RescueRequestViewSet(viewsets.ModelViewSet):
     queryset = RescueRequest.objects.all()
     serializer_class = RescueRequestSerializer
+    filter_fields = ('id',)
 
 
 class ClusterViewSet(viewsets.ModelViewSet):
     queryset = Cluster.objects.all()
     serializer_class = ClusterSerializer
+    filter_fields = ('cluster_id',)
 
     def destroy(self, request, *args, **kwargs):
         super().destroy(self, request, args, kwargs)
