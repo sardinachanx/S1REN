@@ -2,6 +2,7 @@ import React from 'react';
 import 'bulma/css/bulma.css';
 import { Hero, HeroBody, Container, Title} from 'bloomer';
 import Legend from '../Legend';
+import './index.css';
 
 const Overview = (props) => {
 	return (
