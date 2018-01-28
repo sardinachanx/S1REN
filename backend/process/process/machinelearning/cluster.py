@@ -1,5 +1,5 @@
 from sklearn.cluster import KMeans
-from api.models import RescueRequest
+from process.api.models import RescueRequest
 import numpy as np
 
 
