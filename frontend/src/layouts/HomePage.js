@@ -12,13 +12,26 @@ class HomePage extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			tweets: []
+			requests: []
 		}
 		this.apiClient = new apiClient();
 		this.componentDidMount = this.componentDidMount.bind(this);
 	}
 	componentDidMount(){
-
+		let requests = this.state.requests.splice();
+		this.apiClient.get('/rescue-requests/')
+		.then(function(response) {
+			requests.push({
+				id: response.data.id,
+				sender: "Person in cluster "+response.data.cluster.cluster_id,
+				coordinates: "("+response.data.latitude+","+response.data.longitude+")",
+				message: response.data.message
+			})
+		})
+		.catch(function(e){
+			console.log(e);
+		});
+		this.setState({requests});
 	}
 	render(){
 		return(
@@ -27,9 +40,7 @@ class HomePage extends Component {
 				<Column isSize={8}>
 					<Overview />
 					<Search />
-					<Tweets tweets={
-						[{'id': 2, 'sender': 'Rick', 'coordinates': 'Boca Raton, FL', 'message': 'Help me please'},
-						{'id': 3, 'sender': 'Bob', 'coordinates': 'Tampa, FL', 'message': 'Help me'}]} />
+					<Tweets requests={this.state.requests} apiClient={this.apiClient} />
 				</Column>
 				<Column isSize={4}>
 					<Locations />
