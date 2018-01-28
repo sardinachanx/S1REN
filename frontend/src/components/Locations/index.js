@@ -1,15 +1,16 @@
 import React, { Component } from 'react';
 import { compose, withProps } from "recompose";
 import { withScriptjs, withGoogleMap, GoogleMap } from "react-google-maps";
-import TweetMarker from '../TweetMarker';
 import Tweets from '../Tweets';
+import Cluster from '../Cluster';
 
 const TweetsMap = withScriptjs(withGoogleMap((props) =>
   <GoogleMap
     defaultZoom={3}
     defaultCenter={{ lat: 41.850033, lng: -94.65 }}
   >
-    <TweetMarker fetchEvents={props.fetchEvents} id={3} coordinates={{ lat: 39.24, lng: -104.51 }} />
+    <Cluster fetchEvents={props.fetchEvents} id={1} markers={[{id: 3, coordinates: {lat: 39.24, lng: -104.51}}, {id: 4, coordinates: {lat: 40.24, lng: -102.51}}]} />
+
   </GoogleMap>
 ));
 
@@ -21,9 +22,8 @@ class Locations extends Component {
     }
     this.fetchEvents = this.fetchEvents.bind(this);
   }
-  fetchEvents(coordinates){
-    // find clusters/tweets with coordinates matching
-    console.log(coordinates);
+  fetchEvents(id){
+    console.log(id);
   }
   render() {
     return (

@@ -12,7 +12,7 @@ const Header = (props) => {
 						<NavbarItem><a href="/">Disaster Management</a></NavbarItem>
 					</NavbarStart>
 					<NavbarEnd>
-						<NavbarItem><a href="#">DevPost</a></NavbarItem>
+						<NavbarItem><a href="https://shehacksboston.devpost.com/?ref_content=default&ref_feature=challenge&ref_medium=discover">DevPost</a></NavbarItem>
 					</NavbarEnd>
 				</NavbarMenu>
 			</Navbar>
