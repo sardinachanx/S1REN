@@ -18,7 +18,7 @@ const Legend = (props) => {
 				<Button isColor="danger">
 					<X />
 				</Button>
-				<span className="text-padding">Hide tweet</span>
+				<span className="text-padding">Hide request</span>
 			</Column>
 		</Columns>
 	);

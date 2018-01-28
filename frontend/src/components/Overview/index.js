@@ -1,18 +1,15 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
-import {Column, Columns, Hero, HeroBody, Container, Title} from 'bloomer';
+import { Hero, HeroBody, Container, Title} from 'bloomer';
 import Legend from '../Legend';
-import Search from '../Search';
 
 const Overview = (props) => {
 	return (
 		<Hero isSize='small'>
             <HeroBody>
                 <Container isFluid>
-                    <Columns>
-                        <Column><Title isSize={4}>View recent tweets</Title></Column>
-                        <Column><Search /></Column>
-                    </Columns>
+                    <Title isSize={4}>Clusters requesting help</Title>
+                    <p>The following list of clusters requesting help provides first responders an easy way to view real-time tweets determined to be requests for help. A cluster is a group of people requesting help in close proximity to each other. Click a cluster marker on the map to view associated tweets.</p>
                     <Legend />
                 </Container>
             </HeroBody>

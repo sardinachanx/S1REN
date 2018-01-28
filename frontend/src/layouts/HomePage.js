@@ -5,6 +5,7 @@ import Tweets from '../components/Tweets';
 import Overview from '../components/Overview';
 import './HomePage.css';
 import Locations from '../components/Locations';
+import Search from '../components/Search';
 
 const HomePage = () => {
 	return (
@@ -12,7 +13,10 @@ const HomePage = () => {
 			<Columns>
 				<Column isSize={8}>
 					<Overview />
-					<Tweets tweets={[{'id': 2, 'author': 'Rick', 'content': 'test'},{'id': 3, 'author': 'Bob', 'content': 'lol'}]} />
+					<Search />
+					<Tweets tweets={
+						[{'id': 2, 'author': 'Rick', 'place': 'Boca Raton, FL', 'content': 'Help me please'},
+						{'id': 3, 'author': 'Bob', 'place': 'Tampa, FL', 'content': 'Help me'}]} />
 				</Column>
 				<Column isSize={4}>
 					<Locations />

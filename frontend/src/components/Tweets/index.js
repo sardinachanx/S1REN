@@ -24,7 +24,7 @@ class Tweets extends Component {
     //searchKeyword(kw){}
 	render() {
 		const tweetList = this.state.tweets.map((tweet) =>
-        <Tweet key={tweet.id} id={tweet.id} username={tweet.author} date={tweet.date} content={tweet.content} deleteTweet={this.deleteTweet} />)
+        <Tweet key={tweet.id} id={tweet.id} username={tweet.author} place={tweet.place} content={tweet.content} deleteTweet={this.deleteTweet} />)
 
         return (
 			<div className="Tweets">

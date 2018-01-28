@@ -6,10 +6,10 @@ const Search = () => {
 	return (
         <Field hasAddons>
             <Control isExpanded>
-                <Input type="text" placeholder="Search for an event" />
+                <Input type="text" placeholder="Search for a keyword" />
             </Control>
             <Control>
-                <Button isColor="info">Go</Button>
+                <Button isColor="info">Search</Button>
             </Control>
         </Field>
 	);

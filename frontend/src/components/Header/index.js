@@ -1,6 +1,6 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
-import {Navbar, NavbarMenu, NavbarStart, NavbarItem } from 'bloomer';
+import {Navbar, NavbarMenu, NavbarStart, NavbarEnd, NavbarItem } from 'bloomer';
 
 const Header = (props) => {
 	return (
@@ -8,8 +8,11 @@ const Header = (props) => {
 			<Navbar className="has-shadow">
 				<NavbarMenu>
 					<NavbarStart>
-						<NavbarItem>Disaster Management</NavbarItem>
+						<NavbarItem><a href="/">Disaster Management</a></NavbarItem>
 					</NavbarStart>
+					<NavbarEnd>
+						<NavbarItem><a href="#">DevPost</a></NavbarItem>
+					</NavbarEnd>
 				</NavbarMenu>
 			</Navbar>
 		</header>

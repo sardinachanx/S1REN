@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import 'bulma/css/bulma.css';
-import {Button, Box, Media, MediaContent, MediaRight} from 'bloomer';
-import { Check, X } from 'react-feather';
+import {Button, Box, Level, LevelLeft, LevelRight, LevelItem, Media, MediaContent, MediaRight} from 'bloomer';
+import { Check, X, MapPin } from 'react-feather';
 
 class Tweet extends Component {
 	constructor(props){
@@ -16,7 +16,14 @@ class Tweet extends Component {
 			<Box>
 				<Media>
 					<MediaContent>
-						<h3>{this.props.username}</h3>
+						<Level>
+							<LevelLeft>
+								<LevelItem><h3>{this.props.username}</h3></LevelItem>
+							</LevelLeft>
+							<LevelRight>
+								<LevelItem><MapPin /><span> {this.props.place}</span></LevelItem>
+							</LevelRight>
+						</Level>
 						<p>{this.props.content}</p>
 					</MediaContent>
 
