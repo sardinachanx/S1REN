@@ -11,7 +11,7 @@ TWITTER_SECRET = "7nsIbm9lDZKtiQKrCi66Ru2uyDOJ6YCR6c9Yes9Ci6eJK"
 
 blocking_queue = queue.Queue()
 bm = build_model.get_model()
-kmeans = cluster.label_coordinates(FirstResponders.num)
+kmeans = cluster.label_coordinates(FirstResponders.get_latest_by.num)
 
 class Streamer:
     auth = None
