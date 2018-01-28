@@ -39,6 +39,10 @@ h1, h2, h3, h4 {
     color: #FFFFFF;
 }
 
+.is-grey{
+	color: #808080;
+}
+
 .footer{
     margin-top: 9em;
 }
