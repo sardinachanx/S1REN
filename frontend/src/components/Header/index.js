@@ -1,6 +1,7 @@
 import React from 'react';
 import 'bulma/css/bulma.css';
 import {Navbar, NavbarMenu, NavbarStart, NavbarEnd, NavbarItem } from 'bloomer';
+import './index.css';
 
 const Header = (props) => {
 	return (
