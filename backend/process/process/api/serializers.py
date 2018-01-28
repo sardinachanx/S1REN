@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Keyword, RescueRequest, Cluster
+from .models import Keyword, RescueRequest, Cluster, FirstResponders
 
 
 class KeywordSerializer(serializers.ModelSerializer):
@@ -18,3 +18,9 @@ class RescueRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = RescueRequest
         fields = ('id', 'cluster', "longitude", "latitude", "message", "time")
+
+
+class FirstRespondersSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = RescueRequest
+        fields = ('id', 'num')

@@ -11,3 +11,4 @@ def index(request):
     ts.start()
     return HttpResponse("Opened connection")
 
+

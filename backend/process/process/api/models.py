@@ -4,6 +4,7 @@ from django.db import models
 
 from django.db import models
 
+
 class Cluster(models.Model):
     cluster_id = models.IntegerField()
 
@@ -34,3 +35,10 @@ class RescueRequest(models.Model):
     def __str__(self):
         return "(" + self.cluster.__str__() + ", " + str(self.longitude) + ", " + str(self.latitude) + ", " + \
                self.message + ", " + self.time + ")"
+
+
+class FirstResponders(models.Model):
+    num = models.IntegerField(max_length= 10000)
+
+    def __str__(self):
+        return self.num + ""

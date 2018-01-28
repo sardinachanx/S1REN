@@ -1,6 +1,6 @@
 from rest_framework import viewsets
-from .models import Keyword, RescueRequest, Cluster
-from .serializers import KeywordSerializer, RescueRequestSerializer, ClusterSerializer
+from .models import Keyword, RescueRequest, Cluster, FirstResponders
+from .serializers import KeywordSerializer, RescueRequestSerializer, ClusterSerializer, FirstRespondersSerializer
 
 
 # Create your views here.
@@ -18,3 +18,8 @@ class RescueRequestViewSet(viewsets.ModelViewSet):
 class ClusterViewSet(viewsets.ModelViewSet):
     queryset = Cluster.objects.all()
     serializer_class = ClusterSerializer
+
+
+class FirstResponderViewSet(viewsets.ModelViewSet):
+    queryset = FirstResponders.objects.all()
+    serializer_class = FirstRespondersSerializer
