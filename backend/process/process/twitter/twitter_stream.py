@@ -1,6 +1,8 @@
 import tweepy
 import queue
-from api.models import Keyword
+from api.models import Keyword, RescueRequest, FirstResponders
+from process.machinelearning import build_model, cluster
+import tweet
 
 TWITTER_APP_KEY = "2MehiMXWgAKNrJ7fjZG4SuZOB"
 TWITTER_APP_SECRET = "ho98SNkG2fSwkIOvTT2jBqHBWHZVywZstbOmG7CyrTBOWObhMu"
@@ -8,7 +10,8 @@ TWITTER_KEY = "946969592466829312-3R9HHXP7IkrP4f0ZFNeBPxBvAjissvz"
 TWITTER_SECRET = "7nsIbm9lDZKtiQKrCi66Ru2uyDOJ6YCR6c9Yes9Ci6eJK"
 
 blocking_queue = queue.Queue()
-
+bm = build_model.get_model()
+kmeans = cluster.label_coordinates(FirstResponders.num)
 
 class Streamer:
     auth = None
@@ -39,5 +42,11 @@ class StreamListener(tweepy.StreamListener):
             return False
 
     def on_data(self, data):
-        blocking_queue.put(data)
+        # blocking_queue.put(data)
+        t = tweet.Tweet(data)
+        if t.should_classify and bm.classify(t.get_text()):
+            rr = RescueRequest(kmeans.predict([[t.longitude, t.latitude]])[0], t.longitude, t.latitude, t.message,
+                               t.time)
+            rr.save()
+            # notify new data
         return True

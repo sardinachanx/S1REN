@@ -1,4 +1,5 @@
 from sklearn.cluster import KMeans
+from api.models import RescueRequest
 import numpy as np
 
 
@@ -18,3 +19,14 @@ def label_coordinates(twitter_objects, first_responders):
     # print(kmeans.labels_) # returns group id in order of input
     # more_points = [[1,2], [3,4]]
     # kmeans.predict(more_points) # returns group ids in order
+
+
+def label_coordinates_rr(first_responders):
+    list_of_coordinates = [[rr.longitude, rr.latitude] for rr in RescueRequest.objects.all()]
+    kmeans = KMeans(n_clusters=first_responders).fit(list_of_coordinates)
+    cluster_id_list = kmeans.labels_
+    i = 0
+    for rr in RescueRequest:
+        rr.cluster_id = cluster_id_list[i]
+        rr.save()
+        i += 1

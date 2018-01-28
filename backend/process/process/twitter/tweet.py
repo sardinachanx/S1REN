@@ -44,6 +44,13 @@ class Tweet:
                 self.longitude = status.coordinates[0]
                 self.latitude = status.coordinates[1]
 
+    def get_text(self):
+        s = ""
+        for str in self.hashtags:
+            s += str + " "
+        s += self.message
+        return s
+
     def should_classify(self):
         for k in Keyword.objects.all():
             if abs(self.longitude - k.longitude) <= 3.0 and abs(self.latitude - k.latitude) <= 3.0:
