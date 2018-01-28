@@ -22,6 +22,7 @@ from process.api import views
 router = routers.DefaultRouter()
 router.register(r'keywords', views.KeywordViewSet)
 router.register(r'rescue-requests', views.RescueRequestViewSet)
+router.register(r'clusters', views.ClusterViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),

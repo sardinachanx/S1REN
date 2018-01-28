@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Keyword, RescueRequest
+from .models import Keyword, RescueRequest, Cluster
 
 
 class KeywordSerializer(serializers.ModelSerializer):
@@ -7,8 +7,12 @@ class KeywordSerializer(serializers.ModelSerializer):
         model = Keyword
         fields = ('id', 'name', 'type', 'longitude', 'latitude', "city", "state")
 
+class ClusterSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Cluster
+        fields = ('id','cluster_id')
 
 class RescueRequestSerializer(serializers.ModelSerializer):
     class Meta:
         model = RescueRequest
-        fields = ('id', 'cluster_id', "longitude", "latitude", "message", "time")
+        fields = ('id', 'cluster', "longitude", "latitude", "message", "time")
