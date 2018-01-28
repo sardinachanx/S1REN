@@ -5,77 +5,72 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<title></title>
 		<link href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.6.2/css/bulma.min.css" rel="stylesheet">
-		<link href="https://fonts.googleapis.com/css?family=Raleway:400,700" rel="stylesheet">
-		<link href="custom.css" rel="stylesheet">
-		<style>
-			* {
-				margin: 0;
-				padding: 0;
-				-webkit-box-sizing: border-box;
-				-moz-box-sizing: border-box;
-				box-sizing: border-box;
-				font-family: Arial !important;
-			}
-
-			h1, h2, h3, h4 {
-				font-family: Raleway !important;
-			}
-
-			.hero {
-				text-align: center;
-				background-image: url('https://images.unsplash.com/photo-1504591416434-49dfd16b211c?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=5d9785ac8849fa2b3051a86f377db549&auto=format&fit=crop&w=1050&q=80');
-				background-position: center;
-			}
-
-			.hero-body {
-				background: rgba(250, 250, 250, .6);
-				width: 100%;
-			}
-
-			.title {
-				margin-bottom: .5em !important;
-			}
-
-			h3 {
-				text-align: center;
-
-			}
-		</style>
+		<link href="style.css" rel="stylesheet">
 	</head>
 
 	<body>
 		<nav class="navbar" role="navigation" aria-label="main navigation">
 			<div class="navbar-brand">
-				<!--logo-->
-				<img src="" alt="">
-				S1REN
+				<a class="navbar-item" href="/">
+					<img class="logo" src="logo.svg" alt="logo" />
+				</a>
 			</div>
 		</nav>
 
-		<section class="hero is-medium">
+		<section class="hero hero-header is-medium">
 			<header class="hero-body">
 				<div class="container">
-					<h1 class="title is-1">S1REN</h1>
+						<img class="logo" src="logo.svg" alt="logo" />
 					<h2 class="subtitle is-3">Simplifying emergency response on social media</h2>
+					<button class="button is-siren is-large">See the demo</button>
 				</div>
 			</header>
 		</section>
 
+		<section class="hero is-medium">
+				<header class="hero-body">
+					<div class="container has-text-centered">
+						<h2 class="title is-3 has-bottom-spacing is-siren">The Problem</h2>
+						<h4 class="subtitle is-4">During Hurricane  Harvey and other recent natural disasters, people flocked to Twitter to ask for aid, express sympathy, post safety tips, and more.</h4>
+					</div>
+				</header>
+			</section>
+
 		<section class="section">
-			<div class="columns">
-				<div class="column">
-					<h3 class="title is-3">Column title</h3>
-					<p>Column content</p>
-				</div>
-				<div class="column">
-					<h3 class="title is-3">Column title</h3>
-					<p>Column content</p>
-				</div>
-				<div class="column">
-					<h3 class="title is-3">Column title</h3>
-					<p>Column content</p>
+			<div class="container">
+				<div class="columns">
+					<div class="column">
+						<h3 class="title is-3 has-bottom-spacing is-siren">An Innovative Solution</h3>
+						<p class="subtitle is-4">S1REN automatically loads tweets containing certain keywords and locations, then detects potential rescue requests using machine learning.</p>
+					</div>
+					<div class="column">
+							<h3 class="title is-3 has-bottom-spacing is-siren">Address requests intuitively</h3>
+							<p class="subtitle is-4">S1REN presents potential requests for aid within an intuitive interface, letting humans dispatch help or flag tweets as false alarms.</p>
+						</div>
 				</div>
 			</div>
 		</section>
+		<section class="section">
+			<div class="container">
+				<div class="columns">
+					<div class="column">
+						<h3 class="title is-3 has-bottom-spacing is-siren">Efficient resource allocation</h3>
+						<p class="subtitle is-4">Geographic data is extracted from tweets and mapped, allowing users to address the needs of high-priority, high-density areas.</p>
+					</div>
+					<div class="column">
+							<h3 class="title is-3 has-bottom-spacing is-siren">Early incident detection</h3>
+							<p class="subtitle is-4">The real-time and flexible nature of S1REN means that it can be used for any emergency and even to detect budding events, saving money and time.</p>
+						</div>
+				</div>
+			</div>
+		</section>
+		<footer class="footer">
+			<div class="container">
+				<div class="content has-text-centered">
+					<h3>SheHacks Boston 2018</h3>
+				</div>
+			</div>
+		</footer>
 	</body>
 </html>
+
