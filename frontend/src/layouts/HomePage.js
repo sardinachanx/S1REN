@@ -12,12 +12,13 @@ class HomePage extends Component {
 	constructor(props){
 		super(props);
 		this.state = {
-			requests: []
+			tweets: []
 		}
 		this.apiClient = new apiClient();
 		this.componentDidMount = this.componentDidMount.bind(this);
 	}
 	componentDidMount(){
+<<<<<<< HEAD
 		let requests = this.state.requests.splice();
 		this.apiClient.get('/rescue-requests/')
 		.then(function(response) {
@@ -31,6 +32,9 @@ class HomePage extends Component {
 			}
 		});
 		this.setState({requests: requests});
+=======
+
+>>>>>>> parent of 6b87af5... Get rqs on home page
 	}
 	render(){
 		return(
@@ -39,7 +43,9 @@ class HomePage extends Component {
 				<Column isSize={8}>
 					<Overview />
 					<Search />
-					<Tweets requests={this.state.requests} apiClient={this.apiClient} />
+					<Tweets tweets={
+						[{'id': 2, 'sender': 'Rick', 'coordinates': 'Boca Raton, FL', 'message': 'Help me please'},
+						{'id': 3, 'sender': 'Bob', 'coordinates': 'Tampa, FL', 'message': 'Help me'}]} />
 				</Column>
 				<Column isSize={4}>
 					<Locations />

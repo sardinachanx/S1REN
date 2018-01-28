@@ -1,4 +1,4 @@
-from process.process.api.models import Keyword
+from process.api.models import Keyword
 import requests
 import json
 
@@ -20,29 +20,34 @@ class Tweet:
         temp = status.entities.hashtags
         for s in temp:
             self.hashtags.append(s.text)
-        if ~status.geo_enabled or status.place is None:
-            for k in Keyword.objects.all():
-                if k.city in self.message:
-                    self.city = k.city
-                    r = json.loads(requests.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +
-                                                self.city.replace(' ', '+') + "&key=" + GOOGLE_API_KEY))[
-                        "results"][0]["geometry"]["location"]
-                    self.longitude = r["lng"]
-                    self.latitude = r["lat"]
-
-        else:
-            if status.coordinates is None:
-                full = status.place.full_name.split(', ')
-                self.city = full[0]
-                self.state = full[1]
-                r = json.loads(requests.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +
-                                            self.city.replace(' ', '+') + "," + self.state + "&key=" + GOOGLE_API_KEY))[
-                    "results"][0]["geometry"]["location"]
-                self.longitude = r["lng"]
-                self.latitude = r["lat"]
-            else:
-                self.longitude = status.coordinates[0]
-                self.latitude = status.coordinates[1]
+        self.longitude = status.coordinates[0]
+        self.latitude = status.coordinates[1]
+        full = status.place.full_name.split(', ')
+        self.city = full[0]
+        self.state = full[1]
+        # if ~status.geo_enabled or status.place is None:
+        #     for k in Keyword.objects.all():
+        #         if k.city in self.message:
+        #             self.city = k.city
+        #             r = json.loads(requests.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +
+        #                                         self.city.replace(' ', '+') + "&key=" + GOOGLE_API_KEY))[
+        #                 "results"][0]["geometry"]["location"]
+        #             self.longitude = r["lng"]
+        #             self.latitude = r["lat"]
+        #
+        # else:
+        #     if status.coordinates is None:
+        #         full = status.place.full_name.split(', ')
+        #         self.city = full[0]
+        #         self.state = full[1]
+        #         r = json.loads(requests.get("https://maps.googleapis.com/maps/api/geocode/json?address=" +
+        #                                     self.city.replace(' ', '+') + "," + self.state + "&key=" + GOOGLE_API_KEY))[
+        #             "results"][0]["geometry"]["location"]
+        #         self.longitude = r["lng"]
+        #         self.latitude = r["lat"]
+        #     else:
+        #         self.longitude = status.coordinates[0]
+        #         self.latitude = status.coordinates[1]
 
     def get_text(self):
         s = ""

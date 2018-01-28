@@ -23,5 +23,5 @@ class RescueRequestSerializer(serializers.ModelSerializer):
 
 class FirstRespondersSerializer(serializers.ModelSerializer):
     class Meta:
-        model = RescueRequest
+        model = FirstResponders
         fields = ('id', 'num')

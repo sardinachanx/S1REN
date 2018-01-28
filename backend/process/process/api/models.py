@@ -21,7 +21,7 @@ class Keyword(models.Model):
     state = models.CharField(max_length=3)
 
     def __str__(self):
-        return "(" + self.name + ", " + self.type + self.longitude + ", " + self.longitude + ", " \
+        return "(" + self.name + ", " + self.type + self.longitude.__str__() + ", " + self.longitude.__str__() + ", " \
                + self.city + "," + self.state + ")"
 
 
@@ -41,4 +41,4 @@ class FirstResponders(models.Model):
     num = models.IntegerField(max_length= 10000)
 
     def __str__(self):
-        return self.num + ""
+        return self.num.__str__()

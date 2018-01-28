@@ -40,10 +40,8 @@ INSTALLED_APPS = [
     'corsheaders',
     'rest_framework',
     'process.api',
-<<<<<<< HEAD
-=======
-    'process.twitter'
->>>>>>> parent of 96e2ce1... update
+    'process.twitter',
+    'main',
 ]
 
 MIDDLEWARE = [
