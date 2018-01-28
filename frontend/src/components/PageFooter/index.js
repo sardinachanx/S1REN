@@ -8,7 +8,7 @@ const PageFooter = (props) => {
         <Footer className="Footer">
             <Container>
                 <div className="has-text-centered">
-                    <p>SheHacks Boston 2018</p>
+                    <p>Copyright © SheHacks Boston 2018</p>
                 </div>
             </Container>
         </Footer>
